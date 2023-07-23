@@ -14,9 +14,25 @@ const userReducers = (globalState, action) => {
                 ...globalState,
                 authStatus: true
             }
+
+        case "OBTENER_USUARIO":
+            return {
+                ...globalState,
+                authStatus: true,
+                user: action.payload
+            }
+
+        case "CERRAR_SESION":
+            localStorage.removeItem('token')
+            return {
+                ...globalState,
+                user: null,
+                authStatus: false
+            }
+
         default:
             return globalState
-
     }
 }
+
 export default userReducers
