@@ -1,7 +1,9 @@
 import axios from 'axios'
 
-const backendUrl = "http://localhost:4500"
-
-const clientAxios = axios.create({
-    baseURL: backendUrl
+const backendUrlLocal = "http://localhost:4500"
+const backendUrlProd = "https://proyecto05ecommerce2023.onrender.com"
+const axiosClient = axios.create({
+    baseURL: backendUrlLocal
 })
+
+export default axiosClient
