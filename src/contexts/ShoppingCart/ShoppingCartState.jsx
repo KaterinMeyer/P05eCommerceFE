@@ -12,7 +12,7 @@ const ShoppingCartState = (props) => {
         dispatch({
             type: "AGREGAR_PRODUCTO",
             payload: {
-                product
+                product // product: product
             }
         })
     }
