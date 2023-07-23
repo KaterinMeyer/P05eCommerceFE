@@ -1,6 +1,7 @@
 import { useReducer } from "react"
 import UserContext from "./UserContext"
 import userReducers from "./UserReduce"
+import axiosClient from "../../config/axios.jsx"
 
 const UserState = (props) => {
     const intialState = {
@@ -16,8 +17,8 @@ const UserState = (props) => {
 
     const registerUser = async (dataForm) => {
         try {
-            const res = await fetch("http://localhost:4500/auth/signup", { method: 'POST', headers: { "Content-type": 'application/json', "Accept": 'application/json' }, body: JSON.stringify(dataForm) })
-            const payload = await res.json()
+            const res = await axiosClient.post("/auth/signup", dataForm)
+            const payload = await res.data
             dispatch({
                 type: "REGISTRO_EXITOSO",
                 payload: payload
@@ -29,8 +30,8 @@ const UserState = (props) => {
     }
     const loginUser = async (dataForm) => {
         try {
-            const res = await fetch("http://localhost:4500/auth/login", { method: 'POST', headers: { "Content-type": 'application/json', "Accept": 'application/json' }, body: JSON.stringify(dataForm) })
-            const payload = await res.json()
+            const res = await axiosClient.post("/auth/login", dataForm)
+            const payload = await res.data
             dispatch({
                 type: "LOGIN_EXITOSO",
                 payload: payload
