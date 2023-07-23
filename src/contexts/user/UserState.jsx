@@ -50,7 +50,7 @@ const UserState = (props) => {
         }
 
         try {
-            const res = await axiosClient.get('/users/profile')
+            const res = await axiosClient.get('users/profile')
             const userData = res.data // {name: "...", surname: "...", email: "...", ...}
             dispatch({
                 type: "OBTENER_USUARIO",

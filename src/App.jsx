@@ -1,25 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AuthRoute from './components/AuthRoutes/AuthRoutes.jsx'
 import { Header } from './components/Header/Header.jsx'
-import { Home } from './pages/Home/Home.jsx'
-import { Login } from './pages/Auth/Login/Login.jsx'
-import { SignUp } from './pages/Auth/Signup/Signup.jsx'
-import { Profile } from './pages/Profile/Profile.jsx';
-import Product from './pages/Products/Product/Product.jsx'
-import Products from './pages/Products/Products.jsx'
-import UserState from './contexts/user/UserState.jsx'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
 import PublicRoute from './components/PublicRoute/PublicRoute.jsx'
-import AuthRoute from './components/AuthRoutes/AuthRoutes.jsx'
-import ShoppingCartState from './contexts/ShoppingCart/ShoppingCartState'
+import ShoppingCartState from './contexts/ShoppingCart/ShoppingCartState.jsx'
+import UserState from './contexts/user/UserState.jsx'
+import { Login } from './pages/Auth/Login/Login.jsx'
+import { SignUp } from './pages/Auth/SignUp/SignUp.jsx'
+import { Home } from './pages/Home/Home.jsx'
+import Product from './pages/Products/Product/Product.jsx'
+import Products from './pages/Products/Products.jsx'
+import { Profile } from './pages/Profile/Profile.jsx'
 
-export const App = () => {
+function App() {
 
   return (
     <div className='App'>
       <UserState>
         <ShoppingCartState>
+
           <BrowserRouter>
             <Header></Header>
             <Routes>
@@ -44,8 +45,6 @@ export const App = () => {
                 </PublicRoute>
               }>
               </Route>
-
-
               <Route path='/auth/login' element={
                 <AuthRoute>
                   <Login></Login>
