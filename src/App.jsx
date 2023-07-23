@@ -12,21 +12,18 @@ import UserState from './contexts/user/UserState.jsx'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
 import PublicRoute from './components/PublicRoute/PublicRoute.jsx'
 import AuthRoute from './components/AuthRoutes/AuthRoutes.jsx'
+import ShoppingCartState from './contexts/ShoppingCart/ShoppingCartState'
 
 export const App = () => {
 
   return (
     <div className='App'>
       <UserState>
-        {/* <ShoppingCartState>
-          {/* <PayPalScriptProvider options={{ */}
-            {/* clientId: "AVeKDv3MQtzeO3S54YyncR5i7x6uWNXOQ6bli-FiBp5_nKTQPB4Bvv3vL3eNmgRsvwW9cMKxwBsik3-I", */}
-            {/* components: "buttons", */}
-            {/* currency: "USD" */}
+        <ShoppingCartState>
             <BrowserRouter>
               <Header></Header>
               <Routes>
-                {/* Rutas públicas */}
+                {/* Rutas públicas
                 <Route path='/' element={<Home></Home>}>
                 </Route>
                 <Route path='/home' element={
@@ -74,8 +71,7 @@ export const App = () => {
                 </Route>
               </Routes>
             </BrowserRouter>
-          {/* </PayPalScriptProvider>
-        </ShoppingCartState> */}
+        </ShoppingCartState>
       </UserState>
     </div>
   )
