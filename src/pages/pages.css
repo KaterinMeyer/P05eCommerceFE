@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&family=Signika:wght@500&family=UnifrakturCook:wght@700&display=swap');
+
+    
+
+
+.titulo {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(45deg, #778da9, #fff);
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'UnifrakturCook', cursive;
+
+    
+}
+.texto{
+    display: flex;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: justify;
+    padding: 30px;
+}
+
+.my-carousel .carousel.caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Set the background color with some transparency (adjust the alpha value to control the darkness) */
+    padding: 10px; /* Add padding to create some space around the caption text */
+    border-radius: 5px; /* Add rounded corners to the caption box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+    color: #fff; /* Set the text color to white for better contrast */
+
+}
+.carousel-item img {
+    object-fit: cover; /* Adjust the value to fit your needs (e.g., "contain" or "cover") */
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: auto;
+  }
+
+@media only screen and (max-width: 900px) {
+    .titulo {
+        font-size: 20px;
+        height: 30px;
+    }
+
+    .texto{
+        display: flex;
+        font-size: 15px;
+        margin:auto;
+}
+}
+
+#fotoantigua {
+    width: 60%;
+    margin: auto; /* This will center the image horizontally */
+    display: block; /* Ensures the margin auto works correctly */
+    margin-bottom: 100px; 
+    border: 10px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }

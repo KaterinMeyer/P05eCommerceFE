@@ -1,0 +1,25 @@
+/* Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&family=Signika:wght@500&family=UnifrakturCook:wght@700&display=swap');
+
+.NavStyle {
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #636266;
+}
+
+
+.nav-link {
+    font-size: 25px;
+    color: #636266;
+    margin: 0 10px;
+    transition: color 0.2s ease;
+}
+
+
+.nav-link:hover {
+    color: #000;
+}
