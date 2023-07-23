@@ -7,7 +7,7 @@ export function Home () {
     <Carousel fade>
         <Carousel.Item>
             <img 
-            classname = "d-block w-90"
+            className = "d-block w-90"
             src='../src/assets/typischedeutschegerichte.jpg' />
             <Carousel.Caption>
                 <h3>Comida tradicional alemana</h3>
