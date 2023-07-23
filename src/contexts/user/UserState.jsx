@@ -6,7 +6,7 @@ import axiosClient from "../../config/axios.jsx"
 const UserState = (props) => {
     const intialState = {
         user: {
-            id: null,
+            _id: null,
             fullName: null,
             email: null
         },

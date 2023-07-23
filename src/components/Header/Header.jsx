@@ -1,6 +1,10 @@
+import { useContext } from "react"
 import { Container, Nav, Navbar } from "react-bootstrap"
+import UserContext from "../../contexts/user/UserContext"
 
 export const Header = () => {
+    const userCtx = useContext(UserContext)
+    const {logout, user} = userCtx
     return (
         <Navbar bg="light" expand="lg" variant="light">
             <Container fluid>
@@ -29,9 +33,19 @@ export const Header = () => {
 
                     </Nav>
                     <Nav>
+                    {
+                        user?.email ? <>
+                        <Nav.Link href="/profile">Perfil</Nav.Link>
+                        <Nav.Link href='/' onClick={()=> logout}>Cerrar Sesión</Nav.Link>
+                        </> : <>
+                        
+                    
+                        
                         <Nav.Link href="/auth/login">Log in</Nav.Link>
                         <Nav.Link href="/auth/SignUp">Sign Up</Nav.Link>
-                        
+                        </>
+                    }
+
                     </Nav>
 
                 </Navbar.Collapse>

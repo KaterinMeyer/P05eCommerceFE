@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
-import UserContext from '../../contexts/users/UserContext';
+import UserContext from '../../contexts/user/UserContext';
 
 export function Home() {
     const userCtx = useContext(UserContext)

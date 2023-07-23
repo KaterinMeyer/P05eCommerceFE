@@ -8,7 +8,8 @@ import { SignUp } from './pages/Auth/Signup/Signup.jsx'
 import { Profile } from './pages/Profile/Profile.jsx';
 import Product from './pages/Products/Product/Product.jsx'
 import Products from './pages/Products/Products.jsx'
-import UserState from './contexts/users/UserState.jsx'
+import UserState from './contexts/user/UserState.jsx'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
 export const App = () => {
 
@@ -34,8 +35,12 @@ export const App = () => {
             </Route>
 
             {/*Rutas privadas*/}
-            {<Route path='/profile' element={<Profile></Profile>}>
+            {<Route path='/profile' element={<PrivateRoute>
+              <Profile></Profile>
+            </PrivateRoute>
+            }>
             </Route>}
+
           </Routes>
         </BrowserRouter>
       </UserState>
