@@ -1,36 +1,25 @@
-import { useParams } from "react-router-dom"
-import { ProductView } from "../../../components/ProductView/ProductView"
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { ProductView } from '../../../components/ProductView/ProductView.jsx';
+import axiosClient from '../../../config/axios.jsx';
 
 export const Product = () => {
-    const products = [{
-        id: "1",
-        title: "Producto 1",
-        description: "Descripción",
-        price: 12900,
-        imageUrl: "../src/assets/typischedeutschegerichte.jpg"
-
-    },
-    {
-        id: "2",
-        title: "Producto 2",
-        description: "Descripción",
-        price: 15900,
-        imageUrl: "../src/assets/typischedeutschegerichte.jpg"
-
-    },
-    {
-        id: "3",
-        title: "Producto 3",
-        description: "Descripción",
-        price: 22900,
-        imageUrl: "../src/assets/typischedeutschegerichte.jpg"
-
-    }]
     const { productId } = useParams()
-    // Llamar API para obtener un producto por id
-    const product = products.find(product => product.id === productId)
+    // Llamar API para obtener un producto por id (/products/:id)
+    const [product, setProduct] = useState({})
+    useEffect(() => {
+        const getProductFromDB = async () => {
+            const axiosRes = await axiosClient.get(`/products/${productId}`)
+            setProduct(axiosRes.data)
+        }
+        try {
+            getProductFromDB()
+        } catch (error) {
+            console.error(error)
+        }
+    }, [])
     return (
-        <ProductView product={product}></ProductView>
+        <ProductView className="mt-2" product={product}></ProductView>
     )
 }
 

@@ -36,7 +36,9 @@ export const Header = () => {
                     {
                         user?.email ? <>
                         <Nav.Link href="/profile">Perfil</Nav.Link>
-                        <Nav.Link href='/' onClick={()=> logout}>Cerrar Sesión</Nav.Link>
+                        <Button onClick={()=> logout}>
+                            <Nav.Link href='/'>Cerrar Sesión</Nav.Link>
+                            </Button>
                         </> : <>
                         
                     
