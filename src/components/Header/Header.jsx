@@ -2,9 +2,19 @@ import { Container, Nav, Navbar } from "react-bootstrap"
 
 export const Header = () => {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar bg="light" expand="lg" variant="light">
             <Container fluid>
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand href="/">
+                    <img
+                        src="../src/assets/logorestaurant.svg"
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo" />
+
+                </Navbar.Brand>
+                <Navbar.Brand href="/">Restaurant München
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -12,12 +22,18 @@ export const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
-                        <Nav.Link href="#" disabled>
-                            Link
-                        </Nav.Link>
+                        <Nav.Link href="/Home">Home</Nav.Link>
+                        <Nav.Link href="/Products">Menú</Nav.Link>
+
+
+
                     </Nav>
+                    <Nav>
+                        <Nav.Link href="/auth/login">Log in</Nav.Link>
+                        <Nav.Link href="/auth/SignUp">Sign Up</Nav.Link>
+                        
+                    </Nav>
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>
