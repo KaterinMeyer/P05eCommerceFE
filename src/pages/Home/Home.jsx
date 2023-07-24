@@ -13,7 +13,7 @@ export function Home() {
             <Carousel fade>
                 <Carousel.Item>
                     <img
-                        src='../src/assets/botella.jpg' />
+                        src='/../src/assets/botella.jpg' />
                     <Carousel.Caption style={{
                         position: 'absolute',
                         bottom: '0',
@@ -30,7 +30,7 @@ export function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src='../src/assets/Brezel.jpg' />
+                    <img src='/../src/assets/Brezel.jpg' />
                     <Carousel.Caption style={{
                         position: 'absolute',
                         bottom: '0',
@@ -47,7 +47,7 @@ export function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src='../src/assets/Wurst.jpg' />
+                    <img src='/../src/assets/Wurst.jpg' />
                     <Carousel.Caption style={{
                         position: 'absolute',
                         bottom: '0',
