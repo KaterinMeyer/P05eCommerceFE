@@ -2,6 +2,9 @@ import { useContext } from 'react';
 import { Container, Carousel } from 'react-bootstrap';
 import UserContext from '../../contexts/user/UserContext';
 import '../pages.css'
+import BotellaImage from '../../assets/Botella.jpg';
+import BrezelImage from '../../assets/Brezel.jpg';
+import WurstImage from '../../assets/Wurst.jpg';
 
 export function Home() {
     const userCtx = useContext(UserContext)
@@ -12,8 +15,7 @@ export function Home() {
             <h1 className="titulo">{`Willkommen ${user?.fullName || ""}`}</h1>
             <Carousel fade>
                 <Carousel.Item>
-                    <img
-                        src='/../src/assets/botella.jpg' />
+                    <img src={BotellaImage} alt="" />
                     <Carousel.Caption style={{
                         position: 'absolute',
                         bottom: '0',
@@ -30,7 +32,7 @@ export function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src='/../src/assets/Brezel.jpg' />
+                    <img src={BrezelImage} alt="" />
                     <Carousel.Caption style={{
                         position: 'absolute',
                         bottom: '0',
@@ -47,7 +49,7 @@ export function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src='/../src/assets/Wurst.jpg' />
+                <img src={WurstImage} alt="" />
                     <Carousel.Caption style={{
                         position: 'absolute',
                         bottom: '0',
