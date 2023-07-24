@@ -7,7 +7,7 @@ export const Profile = () => {
     return (
         <div>
             <h1>Profile</h1>
-            <p>ID: {user._id}</p>
+            <p>ID: {user.id}</p>
             <p>Nombre Completo: {user.fullName}</p>
             <p>Correo: {user.email}</p>
         </div>

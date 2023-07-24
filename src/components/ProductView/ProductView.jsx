@@ -14,9 +14,9 @@ export const ProductView = ({ product }) => {
                 </Col>
                 <Col xs={12} sm={12} md={6}>
                     <Row style={{ gap: 40 }}>
-                        <Col className='text-center' xs={12} sm={12} md={12}>{product?.title}</Col>
-                        <Col className='text-center' xs={12} sm={12} md={12}>{product?.description}</Col>
-                        <Col className='text-center' xs={12} sm={12} md={12}>{product?.price}</Col>
+                        <Col className='text-center' xs={12} sm={12} md={12}>{product.title}</Col>
+                        <Col className='text-center' xs={12} sm={12} md={12}>{product.description}</Col>
+                        <Col className='text-center' xs={12} sm={12} md={12}>{product.price}</Col>
                     </Row>
                     <Row>
                         <Col style={{ textAlign: "center" }}>

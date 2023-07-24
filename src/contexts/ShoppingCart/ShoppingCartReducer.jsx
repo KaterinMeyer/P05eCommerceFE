@@ -11,7 +11,7 @@ const shoppingCartReducer = (globalState, action) => {
             let productsUpdated
             if (globalState.products) productsUpdated = [...globalState.products]
             else productsUpdated = []
-            const productIndex = productsUpdated.findIndex(item => item._id === product._id)
+            const productIndex = productsUpdated.findIndex(item => item.id === product.id)
             if (productIndex < 0) {
                 productsUpdated.push({
                     ...product,
@@ -33,7 +33,7 @@ const shoppingCartReducer = (globalState, action) => {
 
         case "QUITAR_PRODUCTO":
             const { productId } = payload
-            const productsFiltered = globalState.products.filter(product => product._id !== productId)
+            const productsFiltered = globalState.products.filter(product => product.id !== productId)
             localStorage.setItem(SHOPPING_CART_LS_KEY, JSON.stringify(productsFiltered))
             return {
                 ...globalState,

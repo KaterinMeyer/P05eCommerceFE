@@ -16,6 +16,7 @@ import Products from './pages/Products/Products.jsx'
 import { Profile } from './pages/Profile/Profile.jsx'
 import {About} from './pages/About/About.jsx'
 
+
 function App() {
 
   return (
@@ -33,7 +34,7 @@ function App() {
                 {/* Rutas públicas */}
                 <Route path='/' element={<Home></Home>}>
                 </Route>
-                <Route path='/home' element={
+                <Route path='/' element={
                   <PublicRoute>
                     <Home></Home>
                   </PublicRoute>
@@ -45,7 +46,7 @@ function App() {
                   </PublicRoute>
                 }>
                 </Route>
-                <Route path='/products/:productId' element={
+                <Route path='/products/:id' element={
                   <PublicRoute>
                     <Product></Product>
                   </PublicRoute>
