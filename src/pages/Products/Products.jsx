@@ -5,6 +5,7 @@ import axiosClient from "../../config/axios.jsx";
 import UserContext from '../../contexts/user/UserContext.jsx';
 import '../pages.css';
 import BotellaImage from '../../assets/Botella.jpg';
+import ProstImage from '../../assets/Prost.jpg';
 import BrezelImage from '../../assets/Brezel.jpg';
 import WurstImage from '../../assets/Wurst.jpg';
 import GoulaschImage from '../../assets/Goulasch.jpg';
@@ -21,32 +22,40 @@ export const Products = () => {
         description: "Lúpulos, Trigo o Weizen",
         price: 20,
         imageUrl: BotellaImage
-    }, {
-        id: "2",
+    }, 
+    // {
+    //     id: "2",
+    //     title: "Degustación de Cervezas Tradicionales",
+    //     description: "Lúpulos, Trigo y Weizen",
+    //     price: 40,
+    //     imageUrl: Prost
+    // }, 
+    {
+        id: "3",
         title: "Brezel",
         description: "Pan tradicional con forma de lazo",
         price: 5,
         imageUrl: BrezelImage
     }, {
-        id: "3",
+        id: "4",
         title: "Tabla de Salchichas Tradicional",
         description: "Surtido de Salchicas Tradicionales para degustar y compartir",
         price: 25,
         imageUrl: WurstImage
     }, {
-        id: "4",
+        id: "5",
         title: "Glouasch con Spätzle",
         description: "Tradicional Guiso de Carne (picante) acompañado de fideos típicos de la zona",
         price: 30,
         imageUrl: GoulaschImage
     }, {
-        id: "5",
+        id: "6",
         title: "Rote Grütze",
         description: "Frutos del bosque cocidos acompañado de crema batida.",
         price: 15,
         imageUrl: RoteImage
     }, {
-        id: "6",
+        id: "7",
         title: "Selva Negra",
         description: "Torta tradicional del Schwarzwald, el bosque negro, sur de Alemania",
         price: 13,
