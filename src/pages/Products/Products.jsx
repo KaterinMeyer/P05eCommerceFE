@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ProductCard } from '../../components/ProductCard/ProductCard.jsx';
 import UserContext from '../../contexts/user/UserContext.jsx';
-import { Link } from 'react-router-dom'; // Import the Link component
 import '../pages.css';
 import BotellaImage from '../../assets/Botella.jpg';
 import BrezelImage from '../../assets/Brezel.jpg';
@@ -24,35 +23,35 @@ export const Products = () => {
             imageUrl: BotellaImage
         },
         {
-            id: "3",
+            id: "2",
             title: "Brezel",
             description: "Pan tradicional con forma de lazo",
             price: 5,
             imageUrl: BrezelImage
         },
         {
-            id: "4",
+            id: "3",
             title: "Tabla de Salchichas Tradicional",
             description: "Surtido de Salchicas Tradicionales para degustar y compartir",
             price: 25,
             imageUrl: WurstImage
         },
         {
-            id: "5",
+            id: "4",
             title: "Glouasch con Spätzle",
             description: "Tradicional Guiso de Carne (picante) acompañado de fideos típicos de la zona",
             price: 30,
             imageUrl: GoulaschImage
         },
         {
-            id: "6",
+            id: "5",
             title: "Rote Grütze",
             description: "Frutos del bosque cocidos acompañado de crema batida.",
             price: 15,
             imageUrl: RoteImage
         },
         {
-            id: "7",
+            id: "6",
             title: "Selva Negra",
             description: "Torta tradicional del Schwarzwald, el bosque negro, sur de Alemania",
             price: 13,
@@ -71,10 +70,7 @@ export const Products = () => {
                 {products.map(product => {
                     return (
                         <Col key={product.id}>
-                            <ProductCard
-                                product={product}
-                                // Include the product ID as a parameter in the Link
-                                productViewPath={`/products/${product.id}`}
+                            <ProductCard product={product} productViewPath={`/products/${product.id}`}
                             />
                         </Col>
                     );

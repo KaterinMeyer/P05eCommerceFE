@@ -46,7 +46,7 @@ function App() {
                   </PublicRoute>
                 }>
                 </Route>
-                <Route path='/products/:id' element={
+                <Route path='/products/:productId' element={
                   <PublicRoute>
                     <Product></Product>
                   </PublicRoute>
